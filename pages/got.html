@@ -1,0 +1,304 @@
+<html>
+<head>
+<title>The Game Of Thrones</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="got.html">The Game Of Thrones</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+<div id="latest">
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/got/g6.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/got/g5.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/got/g4.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/got/g3.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/got/g2.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/got/g1.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" controls>
+  <source src="../video/got.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+<div class="wrapper">
+  <div id="container">
+    <h1>The Game Of Thrones</h1>
+<p>Game of Thrones is an American fantasy drama television series created for HBO by showrunners David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is titled A Game of Thrones. Filmed in a Belfast studio and on location elsewhere in Northern Ireland, Croatia, Iceland, Morocco, Spain, Malta, Scotland, and the United States, it premiered on HBO in the United States on April 17, 2011</p>
+<p>The series, set on the fictional continents of Westeros and Essos at the end of a decade-long summer, interweaves several plot lines with a broad ensemble cast. The first narrative arc follows a civil war among several noble houses for the Iron Throne of the Seven Kingdoms; the second covers the rising threat of the impending winter and the legendary creatures and fierce peoples of the North; the third chronicles the attempts of the exiled last scion of the realm's deposed ruling dynasty to reclaim the throne.</p>
+<p>Game of Thrones has attracted record numbers of viewers on HBO and obtained an exceptionally broad and active international fan base. It received widespread acclaim by critics, although its frequent use of nudity, violence and sexual violence towards women has attracted criticism. The series has won numerous awards and nominations, including a Primetime Emmy Award nomination for Outstanding Drama Series for its first four seasons, a Golden Globe Award nomination for Best Television Series – Drama, a Hugo Award for Best Dramatic Presentation in both Long Form and Short Form, and a Peabody Award. Among the ensemble cast, Peter Dinklage has won an Emmy and a Golden Globe for his performance as Tyrion Lannister.</p>
+  <h2>Plot</h2>
+  <p>Game of Thrones roughly follows the three storylines of A Song of Ice and Fire. Set in the fictional Seven Kingdoms of Westeros, the series chronicles the violent dynastic struggles among the realm's noble families for control of the Iron Throne. As the series opens, additional threats emerge in the icy North and in the eastern continent of Essos. The first season is a faithful adaptation of the book, later seasons however began to diverge with significant changes. According to David Benioff, the show is "about adapting the series as a whole and following the map George laid out for us and hitting the major milestones, but not necessarily each of the stops along the way."
+The novels and their adaptation derive aspects of their settings, characters and plot from various events of European history. A principal inspiration for the novels is the English Wars of the Roses (1455–85) between the houses of Lancaster and York, reflected in Martin's houses of Lannister and Stark. Most of Westeros, with its castles and knightly tournaments, is reminiscent of High Medieval Western Europe. The scheming Cersei, for instance, calls to mind Isabella, the "she-wolf of France" (1295–1358).[8] She and her family, as depicted in Maurice Druon's historical novel series The Accursed Kings, in particular, inspired Martin. Other historical inspirations for elements of the series include Hadrian's Wall (which became Martin's great Wall), the legend of Atlantis (ancient Valyria), Byzantine "Greek fire" ("wildfire"), Icelandic sagas of the Viking Age (the Ironborn) and the Mongol hordes (the Dothraki), as well as elements from the Hundred Years' War (1337–1453) and the Italian Renaissance (c. 1400–1500).[8] The series' great popularity has in part been attributed to Martin's skill at fusing these disparate elements into a seamless whole that appears credible on its own terms as an alternative history</p>
+  <h2>Cast</h2>
+  <ul>
+  <li>
+  Sean Bean as Lord Eddard "Ned" Stark </li>
+<li>Mark Addy as King Robert Baratheon </li>
+<li>Nikolaj Coster-Waldau as Ser Jaime Lannister </li>
+<li>Michelle Fairley as Lady Catelyn Stark </li>
+<li>Lena Headey as Queen Cersei Lannister </li>
+<li>Emilia Clarke as Princess Daenerys Targaryen </li>
+<li>Iain Glen as Ser Jorah Mormont </li>
+<li>Aidan Gillen as Lord Petyr "Littlefinger" Baelish </li>
+<li>Harry Lloyd as Prince Viserys Targaryen </li>
+<li>Kit Harington as Jon Snow </li>
+<li>Sophie Turner as Sansa Stark </li>
+<li>Maisie Williams as Arya Stark </li>
+<li>Richard Madden as Robb Stark </li>
+<li>Alfie Allen as Theon Greyjoy </li>
+<li>Isaac Hempstead-Wright as Brandon "Bran" Stark </li>
+<li>Jack Gleeson as Prince Joffrey Baratheon </li>
+<li>Rory McCann as Sandor "The Hound" Clegane </li>
+<li>Peter Dinklage as Tyrion Lannister </li>
+  </ul>
+  <h2>Ratings</h2>
+  <ul>  
+  <li>&#9733 &#9733 &#9733 &#9733 &#9733 9.5/10·IMDb</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 100%·Rotten Tomatoes</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 Tv.com</li>
+  </ul>
+  
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+     <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+   <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="tvd.html">The Vampire Diaries</a></li>
+        <li><a href="originals.html">The Originals</a></li>
+        <li><a href="bang.html">The Big Bang Theory</a></li>
+        <li><a href="fargo.html">Fargo</a></li>
+        <li class="last"><a href="supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="seinfeld.html">Seinfeld</a></li>
+        <li><a href="himym.html">How I Met Your Mother</a></li>
+        <li><a href="tahm.html">Two and a Half a Men</a></li>
+        <li><a href="black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

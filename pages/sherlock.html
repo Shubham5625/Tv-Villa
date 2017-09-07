@@ -1,0 +1,301 @@
+<html>
+<head>
+<title>Sherlock</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="sherlock.html">Sherlock</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+<div id="latest">
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/sherlock/s11.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/sherlock/s2.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/sherlock/s3.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/sherlock/s4.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/sherlock/s5.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/sherlock/s1.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" controls>
+  <source src="../video/sher.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+<div class="wrapper">
+  <div id="container">
+    <h1>Sherlock</h1>
+	<p>Sherlock is a British television crime drama that presents a contemporary adaptation of Sir Arthur Conan Doyle's Sherlock Holmes detective stories. Created by Steven Moffat and Mark Gatiss, it stars Benedict Cumberbatch as Sherlock Holmes and Martin Freeman as Doctor John Watson. Nine episodes have been produced, the first three of which were broadcast in 2010. Series two was broadcast in 2012, and a third series was broadcast in 2014. The third series has become the UK's most watched drama series since 2001. Sherlock has been sold to over 200 territories. Sue Vertue and Elaine Cameron of Hartswood Films produced the series for the BBC and co-produced it with WGBH Boston for its Masterpiece anthology series on PBS. The series is primarily filmed in Cardiff, Wales. North Gower Street in London is used for exterior shots of Holmes and Watson's 221B Baker Street residence.</p>
+	<p>Critical reception has been highly positive, with many reviews praising the quality of the writing, performances, and direction. Sherlock has been nominated for numerous awards including: BAFTAs, Emmys and Golden Globe, winning several awards across a variety of categories. The show received the most number of wins at the 66th Primetime Emmy Awards including Outstanding Writing for a Miniseries, Movie or a Dramatic Special for Moffat, Outstanding Lead Actor in a Miniseries or a Movie for Cumberbatch, and Outstanding Supporting Actor in a Miniseries or a Movie for Freeman. In addition, the show was also honoured with a Peabody Award in 2011.</p>
+	<p>All of the series have been released on DVD and Blu-ray, alongside tie-in editions of selected original Conan Doyle stories and original soundtrack composed by David Arnold and Michael Price. In January 2014, the show launched its official mobile app called Sherlock: The Network. On 2 July 2014, Sherlock was renewed for a fourth series. The three-episode series is to be aired in early 2016, following on from a full-length Christmas 2015 special which went into production in January 2015.</p>
+  <h2>Plot</h2>
+  <p>Sherlock depicts "consulting detective" Sherlock Holmes (Benedict Cumberbatch) solving various mysteries in London. Holmes is assisted by his flatmate and friend, Dr. John Watson (Martin Freeman), who has returned from military service in Afghanistan with the Royal Army Medical Corps. Although Metropolitan Police Service Detective Inspector Greg Lestrade (Rupert Graves) and others are at first skeptical of Holmes, over time his remarkable intellect and powers of observation persuade them of his value. In part through Watson's blog documenting their adventures, Holmes becomes a reluctant celebrity with the press reporting on his cases and eccentric personal life. Both ordinary people and the British government ask for his help.</p>
+  <p>Although the series depicts a variety of crimes and perpetrators, Holmes' conflict with archnemesis Jim Moriarty (Andrew Scott) is a recurring feature. Molly Hooper (Louise Brealey), a pathologist at St. Bart's Hospital occasionally assists Holmes in his cases. Other recurring roles include Una Stubbs as Mrs Hudson, Holmes and Watson's landlady, and series co-creator Mark Gatiss as Holmes' elder brother Mycroft.</p>
+  <h2>Cast</h2>
+  <ul>
+  <li>Benedict Cumberbatch	as
+ Sherlock Holmes </li>
+<li>Martin Freeman	as
+ Dr. John Watson </li>
+<li>Rupert Graves	as
+ DI Lestrade </li>
+<li>Una Stubbs	as	
+ Mrs. Hudson </li>
+<li>Louise Brealey	as
+ Molly Hooper </li>
+<li>Mark Gatiss	as
+ Mycroft Holmes </li>
+<li>Andrew Scott	as		
+ Jim Moriarty 
+<li>Jonathan Aris	as	
+ Anderson  </li>
+  </ul>
+  <h2>Ratings</h2>
+  <ul>  
+  <li>&#9733 &#9733 &#9733 &#9733 &#9733 9.3/10·IMDb</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 100%·Rotten Tomatoes</li>
+<li>&#9733 &#9733 &#9733 &#9733  Tv.com</li>
+  </ul>
+  
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+   <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="tvd.html">The Vampire Diaries</a></li>
+        <li><a href="originals.html">The Originals</a></li>
+        <li><a href="bang.html">The Big Bang Theory</a></li>
+        <li><a href="fargo.html">Fargo</a></li>
+        <li class="last"><a href="supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="seinfeld.html">Seinfeld</a></li>
+        <li><a href="himym.html">How I Met Your Mother</a></li>
+        <li><a href="tahm.html">Two and a Half a Men</a></li>
+        <li><a href="black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

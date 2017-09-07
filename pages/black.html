@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>Orange is the New Black</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="black.html">Orange is the New Black</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+<div id="latest">
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after </li> slide), 3 Chain Flatten (goes after </li> slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before </li> slide), 3 Chain Flatten (goes before </li> slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/black/b1.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/black/b2.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/black/b3.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/black/b4.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/black/b5.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/black/b6.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" controls>
+  <source src="../video/black.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+<div class="wrapper">
+  <div id="container">
+    <h1>Orange is the New Black</h1>
+	<p>Orange Is the New Black (often abbreviated to OITNB) is an American comedy-drama series created by Jenji Kohan and first released on Netflix on July 11, 2013. The series, produced by Tilted Productions in association with Lionsgate Television, is based on Piper Kerman's memoir, Orange Is the New Black: My Year in a Women's Prison, about her experiences in prison. The second season premiered on June 6, 2014 at 3:00 am EDT. The series has been renewed for a third season. On July 10, 2014, the series received 12 Primetime Emmy Award nominations. On March 2, 2015, Netflix announced that season 3 would premiere on June 12, 2015. On April 15, 2015, the series was renewed for a fourth season, scheduled to air in 2016</p>
+  <h2>Plot</h2>
+  <p>The series revolves around Piper Chapman (Taylor Schilling), a woman living in New York City, who is sentenced to 15 months in a women's federal prison called Litchfield Penitentiary (operated by the "Federal Department of Corrections", a fictionalized version of the Federal Bureau of Prisons). She has been convicted of transporting a suitcase full of drug money to her former girlfriend Alex Vause (Laura Prepon), an international drug smuggler/mule. The offense had occurred ten years prior to the start of the series, and in that time Piper had moved on to a quiet, law-abiding life among New York's upper middle class, so her sudden and unexpected arrest seriously disrupts her relationships with her fiancé and her family.
+
+In prison, Piper is reunited with Alex (who might or might not have named Piper in her trial, resulting in her friend's arrest), and they re-examine their relationship and deal with their fellow prisoners. The show often shows flashbacks of significant events from the past of various inmates. These flashbacks may explain how the inmate came to be in prison or otherwise further develop the character's backstory.</p>
+ <h2>Cast</h2>
+  <ul>
+  <li>Taylor Schilling	as Piper Chapman	</li>
+<li>Michael J. Harney		as Sam Healy	</li>
+<li>Kate Mulgrew		as Galina "Red" </li>
+<li>Laura Prepon		as Alex Vause		</li>
+<li>Uzo Aduba		as Suzanne "Crazy Eyes" Warren	</li>
+<li>Danielle Brooks		as Tasha "Taystee" Jefferson	</li>
+<li>Natasha Lyonne		as Nicole "Nicky" Nichols	</li>
+<li>Taryn Manning		as Tiffany "Pennsatucky" Doggett	</li>
+<li>Selenis Leyva		as Gloria Mendoza	</li>
+<li>Adrienne C. Moore	as 	Cindy "Black Cindy" Hayes	</li>
+<li>Dascha Polanco		as Dayanara "Daya" Diaz	</li>
+<li>Nick Sandow		as Joe Caputo	</li>
+<li>Yael Stone		as Lorna Morello	</li>
+<li>Samira Wiley	as 	Poussey Washington	</li>
+<li>Jason Biggs		as Larry Bloom	</li>
+<li>Michelle Hurst	as 	Miss Claudette Pelage</li>
+  </ul>
+  <h2>Ratings</h2>
+  <ul>  
+  <li>&#9733 &#9733 &#9733 &#9733  8.4/10·IMDb</li>
+
+  </ul>  
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+   <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="pages/breakingbad.html">Breaking Bad</a></li>
+        <li><a href="pages/got.html">The Game of Thrones</a></li>
+        <li><a href="pages/sherlock.html">Sherlock</a></li>
+        <li><a href="pages/truedetective.html">True Detective</a></li>
+        <li class="last"><a href="pages/homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="pages/tvd.html">The Vampire Diaries</a></li>
+        <li><a href="pages/originals.html">The Originals</a></li>
+        <li><a href="pages/bang.html">The Big Bang Theory</a></li>
+        <li><a href="pages/fargo.html">Fargo</a></li>
+        <li class="last"><a href="pages/supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="pages/seinfeld.html">Seinfeld</a></li>
+        <li><a href="pages/himym.html">How I Met Your Mother</a></li>
+        <li><a href="pages/tahm.html">Two and a Half a Men</a></li>
+        <li><a href="pages/black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="pages/arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<html>
+<head>
+<title>How I Met Your Mother</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="himym.html">How I Met Your Mother</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+<div id="latest">
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after </li> slide), 3 Chain Flatten (goes after </li> slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before </li> slide), 3 Chain Flatten (goes before </li> slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/himym/h1.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/himym/h2.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/himym/h3.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/himym/h4.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/himym/h5.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/himym/h6.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" controls>
+  <source src="../video/himym.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+<div class="wrapper">
+  <div id="container">
+    <h1>Two and a Half Men</h1>
+	<p>How I Met Your Mother (often abbreviated to HIMYM) is an American sitcom that originally ran on CBS from September 19, 2005, to March 31, 2014. The series follows the main character, Ted Mosby, and his group of friends in Manhattan. As a framing device, Ted, in the year 2030, recounts to his son and daughter the events that led him to meeting their mother.</p>
+<p>The series was created by Craig Thomas and Carter Bays, who also served as the show's executive producers and were frequent writers. The series was loosely inspired by their friendship when they both lived in New York City. Among the 208 episodes, there were only four directors: Pamela Fryman (196 episodes), Rob Greenberg (7 episodes), Michael Shea (4 episodes), and Neil Patrick Harris (1 episode).</p> 
+<p>Known for its unique structure and eccentric humor, How I Met Your Mother has gained a cult following over the years. The show initially received positive reviews, while the later seasons received more mixed reviews. The show was nominated for 28 Emmy Awards, winning nine. In 2010, Alyson Hannigan won the People's Choice Award for Favorite TV Comedy Actress. In 2012, seven years after its premiere, the series won the People's Choice Award for Favorite Network TV Comedy, and Neil Patrick Harris won the award for Favorite TV Comedy Actor.</p>
+<p>The ninth and final season began airing on September 23, 2013, and concluded on March 31, 2014, with a double-length finale episode, with the finale receiving mostly negative reviews from critics and fans alike as many believed it contradicted many of the previous episodes.</p>
+ <h2>Plot</h2>
+ <p>The series concerns the adventures of Ted Mosby (played by Josh Radnor) and how he met the mother of his children. The story starts with the younger Mosby living in New York City and working as an architect; the narrative deals primarily with his best friends, including the long-lasting couple Marshall Eriksen (Jason Segel) and Lily Aldrin (Alyson Hannigan); the eccentric, womanizing-playboy Barney Stinson (Neil Patrick Harris); and news anchor Robin Scherbatsky (Cobie Smulders). The series explores many storylines, including a "will they or won't they" relationship between Robin and each of the two single male characters, Marshall and Lily's relationship, and the ups and downs of the characters' careers.
+
+The show's frame story depicts Ted (voice of Bob Saget, uncredited) verbally retelling the story to his son Luke (David Henrie) and daughter Penny (Lyndsy Fonseca) as they sit on the couch in the year 2030. This future-set frame is officially the show's "present day" and How I Met Your Mother exploits this framing device in numerous ways: to depict and re-depict events from multiple points of view; to set up jokes using quick and sometimes multiple flashbacks nested within the oral retelling; to substitute visual, verbal or aural euphemisms for activities Ted doesn't want to talk about with his children (sexual practices, use of illicit substances, vulgar language, etc); and even to add some elements of humor: in the episode How I Met Everyone Else, Ted describes his dates with a girlfriend whose name he has forgotten (Abigail Spencer), leading all characters to act as though her given name is "Blah-Blah."
+
+While the traditional love-story structure begins when the romantic leads first encounter each other, How I Met Your Mother does not introduce Ted's wife (Cristin Milioti) until its final season, and only announces her name (Tracy McConnell) during the series finale. The show instead focuses on Ted's prior relationships and his dissatisfaction with those women, thus setting the stage for his eventual happiness with Tracy</p>
+ <h2>Cast</h2>
+  <ul>
+  <li>Josh Radnor	as
+ Ted Mosby </li>
+<li>Jason Segel	as	
+ Marshall Eriksen </li>
+<li>Cobie Smulders	as	
+ Robin Scherbatsky </li>
+<li>Neil Patrick Harris	as	
+ Barney Stinson </li>
+<li>Alyson Hannigan	as
+ Lily Aldrin </li>
+  </ul>
+  <h2>Ratings</h2>
+  <ul>  
+  <li>&#9733 &#9733 &#9733 &#9733  8.5/10·IMDb</li>
+<li>&#9733 &#9733 &#9733 &#9733 8.4/10 Tv.com</li>
+  </ul>  
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+   <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="tvd.html">The Vampire Diaries</a></li>
+        <li><a href="originals.html">The Originals</a></li>
+        <li><a href="bang.html">The Big Bang Theory</a></li>
+        <li><a href="fargo.html">Fargo</a></li>
+        <li class="last"><a href="supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="seinfeld.html">Seinfeld</a></li>
+        <li><a href="himym.html">How I Met Your Mother</a></li>
+        <li><a href="tahm.html">Two and a Half a Men</a></li>
+        <li><a href="black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

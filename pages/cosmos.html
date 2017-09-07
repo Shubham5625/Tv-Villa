@@ -1,0 +1,310 @@
+<html>
+<head>
+<title>Cosmos-A Spacetime Odyssey</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="cosmos.html">Cosmos-A Spacetime Odyssey</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+<div id="latest">
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/cosmos/c1.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/cosmos/c2.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/cosmos/c3.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/cosmos/c4.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/cosmos/c5.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/cosmos/c6.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" controls>
+  <source src="../video/cosmos.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+<div class="wrapper">
+  <div id="container">
+    <h1>Cosmos-A Spacetime Odyssey</h1>
+	<p>Cosmos: A Spacetime Odyssey is a 2014 American science documentary television series. The show is a follow-up to the 1980 television series Cosmos: A Personal Voyage, which was presented by Carl Sagan on the Public Broadcasting Service and is considered a milestone for scientific documentaries. This series was developed to bring back the foundation of science to network television at the height of other scientific-based television series and films. The show is presented by astrophysicist Neil deGrasse Tyson, who, as a young college student, was inspired by Sagan. Among the executive producers are Seth MacFarlane, whose financial investment was instrumental in bringing the show to broadcast television, and Ann Druyan, Sagan's widow, a co-author and co-creator of the original television series. The show is produced by Brannon Braga, and Alan Silvestri provides the backing score</p>
+	<p>The series loosely follows the same thirteen-episode format and storytelling approach that the original Cosmos used, including elements such as the "Ship of the Imagination" and the "Cosmic Calendar", but features information updated since the 1980 series along with extensive computer-generated graphics and animation footage augmenting the narration.</p>
+	<p>The series premiered on March 9, 2014,[5] simultaneously in the US across ten 21st Century Fox networks. The remainder of the series aired on the Fox Network, with the National Geographic Channel rebroadcasting the episodes the next night with extra content.[6] The series has been rebroadcast internationally in dozens of other countries by local National Geographic and Fox stations. The series concluded on June 8, 2014, with home media release of the entire series on June 10, 2014.</p>
+  <h2>Background</h2>
+  <p>The original 13-part Cosmos: A Personal Voyage first aired in 1980 on the Public Broadcasting System, and was hosted by Carl Sagan. The show has been considered highly significant since its broadcast; David Itzkoff of The New York Times described it as "a watershed moment for science-themed television programming". The show has been watched by at least 400 million people across 60 different countries, and until the 1990 documentary The Civil War, remained the network's highest rated program.
+Following Sagan's death in 1996, his widow Ann Druyan, the co-creator of the original Cosmos series along with Steven Soter, and astrophysicist Neil deGrasse Tyson sought to create a new version of the series, aimed to appeal to as wide an audience as possible and not just to those interested in the sciences. They had struggled for years with reluctant television networks that failed to see the broad appeal of the show</p>
+  <h2>Cast</h2>
+  <ul>
+  <li>Neil deGrasse Tyson as himself</li>
+<li>Carl Sagan as himself</li>
+<li>Peter Emshwiller as George Tilton</li>
+<li>Piotr Michael as Edmund Muskie</li>
+<li>Seth MacFarlane as Giordano Bruno</li>
+<li>John Steven Rocha as Robert Bellarmine</li>
+<li>Paul Telfer as an angry scholar</li>
+<li>Michael Chochol as Jan Oort</li>
+<li>Kirsten Dunst as Cecilia Payne-Gaposchkin</li>
+<li>Cary Elwes as Edmond Halley and Robert Hooke</li>
+<li>Richard Gere as Clair Patterson</li>
+<li>Jonathan Morgan Heit as John Herschel</li>
+<li>Martin Jarvis as Humphry Davy</li>
+<li>Tom Konkle as Samuel Pepys</li>
+<li>Marlee Matlin as Annie Jump Cannon</li>
+<li>Heiko Obermoller as Hermann Einstein</li>
+<li>Julian Ovenden as Michael Faraday</li>
+<li>Nadia Rochelle Pfarr as Malala Yousafzai</li>
+<li>Enn Reitel as Albert Einstein</li>
+<li>Wesley Salter as James Clerk Maxwell</li>
+<li>Amanda Seyfried as Marie Tharp</li>
+<li>Alexander Siddig as Isaac Newton</li>
+<li>Patrick Stewart as William Herschel</li>
+<li>Oliver Vaquer as Joseph von Fraunhofer</li>
+<li>Julie Wittner as Sarah Faraday</li>
+<li>Marc Worden as Harrison Brown</li>
+  </ul>
+  <h2>Ratings</h2>
+  <ul>  
+  <li>&#9733 &#9733 &#9733 &#9733 &#9733 9.4/10·IMDb</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 4.1/5 Amazon.com</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 9.1/10 Tv.com</li>
+  </ul>  
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+    <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="tvd.html">The Vampire Diaries</a></li>
+        <li><a href="originals.html">The Originals</a></li>
+        <li><a href="bang.html">The Big Bang Theory</a></li>
+        <li><a href="fargo.html">Fargo</a></li>
+        <li class="last"><a href="supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="seinfeld.html">Seinfeld</a></li>
+        <li><a href="himym.html">How I Met Your Mother</a></li>
+        <li><a href="tahm.html">Two and a Half a Men</a></li>
+        <li><a href="black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

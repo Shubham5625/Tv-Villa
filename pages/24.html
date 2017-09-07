@@ -1,0 +1,335 @@
+<html>
+<head>
+<title>24</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="24.html">24</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+<div id="latest">
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/24/241.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/24/242.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/24/243.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/24/244.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/24/245.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/24/246.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" controls>
+  <source src="../video/24.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+<div class="wrapper">
+  <div id="container">
+    <h1>24</h1>
+	<p>24 is an American television series produced for the Fox network created by Joel Surnow and Robert Cochran, and starring Kiefer Sutherland as Counter Terrorist Unit (CTU) agent Jack Bauer. Each 24-episode season covers 24 hours in the life of Bauer, using the real time method of narration. Premiering on November 6, 2001, the show spanned 192 episodes over eight seasons, with the series finale broadcast on May 24, 2010. In addition, a television film, 24: Redemption, was broadcast between seasons six and seven. Fox announced in May 2013 that 24 would return as a 12-episode series titled 24: Live Another Day which aired from May 5 to July 14, 2014.</p>
+	<p>Bauer is the only character to have appeared in every episode of the series. The series begins with him working for the Los Angeles-based Counter Terrorist Unit, in which he is a highly proficient agent with an "ends justify the means" approach, regardless of the perceived morality of some of his actions. Throughout the series most of the main plot elements unfold like a political thriller. A typical plot has Bauer racing against the clock as he attempts to thwart multiple terrorist plots, including presidential assassination attempts, weapons of mass destruction detonations, bioterrorism, cyber attacks, as well as conspiracies which deal with government and corporate corruption.</p>
+	<p>24 garnered critical acclaim, winning numerous awards over its eight seasons, including Best Drama Series at the 2003 Golden Globe Awards and Outstanding Drama Series at the 2006 Primetime Emmy Awards. At the conclusion of its eighth season, 24 became the longest-running U.S. espionage-themed television drama ever, surpassing both Mission: Impossible and The Avengers</p>
+  <h2>Plot</h2>
+  <p>24 is a serial drama which stars Kiefer Sutherland as Jack Bauer, focusing on the efforts of the fictional Counter Terrorist Unit, and their efforts to protect America from terrorism plots. Each episode typically follows Bauer, officials in the U.S. government, and the conspirators behind the events of the day, often simultaneously. The episodes take place over the course of one hour, depicting events as they happen, in real time. To emphasize the real-world flow of events, a clock is prominently displayed on-screen during the show, and there is a regular use of split screens, a technique used to depict multiple scenes occurring at the same time.</p>
+
+<p>Season 1 begins at midnight on the day of the California presidential primary. Jack Bauer's protocol is to protect Senator David Palmer from an assassination plot and rescue his own family from those responsible for the plot, who seek retribution for Jack and Palmer's involvement with a covert American mission in the Balkans.</p>
+
+<p>Season 2, set 18 months later, begins at 8:00 a.m. Jack must stop a nuclear bomb from detonating in Los Angeles, then assist President David Palmer in proving who is responsible for the threat. This is necessary to avoid an unfounded war between the U.S. and three Middle Eastern countries.</p>
+
+<p>Season 3, set three years later, begins at 1:00 p.m. Jack must again infiltrate a Mexican drug cartel to seize a deadly virus being marketed underground. Meanwhile, Palmer attempts to be devoid of further political scandal which could cost him his presidency. Later, Jack and Palmer must cooperate with terrorist Stephen Saunders, who eventually gains possession of the virus, and stop him from releasing it in several American cities.</p>
+
+<p>Season 4, set 18 months later, begins at 7:00 a.m. Jack must save the lives of his new boss, Secretary of Defense James Heller, and Heller's daughter Audrey Raines (with whom Jack is romantically involved) when they are kidnapped by terrorists. However, Habib Marwan uses this as a disguise to launch further attacks against America, and Jack is forced to use unorthodox methods to stop him, which results in long-term consequences for both Jack and the United States.</p>
+
+<p>Season 5, set 18 months after, begins at 7:00 a.m. Jack is believed to be dead by everyone except a few of his closest friends. He is forced to resurface when some of those friends are murdered and he is framed by terrorists with connections to the American government. The acquisition of nerve gas to protect U.S. oil interests in Asia backfires, and Jack discovers an insidious conspiracy while trying to stop those responsible.</p>
+
+<p>Season 6, set 20 months later, begins at 6:00 a.m. Jack is released after being detained in a Chinese prison following the events of Season 5. Terrorists who hold a vendetta against Jack plot to set off suitcase nuclear devices in America and he must secure them. Later, Jack is forced to choose between those he loves and national security when the Chinese set their sights on sensitive circuitry that could trigger a war between the U.S. and Russia.</p>
+
+<p>Redemption, set three-and-a-half years later, begins at 3:00 p.m. Jack finds himself caught up in a military coup in the fictional African nation of Sangala. Militants are being provided assistance from officials within the United States, where Allison Taylor is being sworn into office as President. Due to the 2007-08 Writers' Strike, season seven was delayed one year. To bridge the one-and-a-half-year gap between seasons, Redemption was produced. This television film aired on November 23, 2008.</p>
+
+<p>Season 7, set 65 days after the end of Redemption, begins at 8:00 a.m. Jack is assisted by the FBI and covert operatives when the firewall for America's federal computer infrastructure is breached by the same people responsible for a conflict in Sangala. Jack must uncover who is corrupted within President Taylor's administration, which has allowed for the Sangalans to raid the White House and capture Taylor. She is later blackmailed by a fictional private military company in an attempt to release biological weapons on U.S. soil. Jack must thwart these attacks so the conspirators will fail to cement their power at a government level.</p>
+
+<p>Season 8, set 18 months later, begins at 4:00 p.m. Jack is brought in by CTU to uncover a Russian plot to assassinate Islamic leader Omar Hassan during peace negotiations with U.S. President Taylor. Russia's contingency plan involves engineering a dirty bomb, which Islamic extremists threaten to detonate unless Hassan is handed over. Jack seeks retribution for personal losses suffered after Charles Logan convinces Taylor to cover up these crimes to protect the peace agreement. Jack becomes a fugitive from Russian and American governments and disappears.</p>
+
+<p>Live Another Day, set four years later, begins at 11:00 a.m. and finds fugitive Jack in London trying to stop an assassination attempt on President James Heller by terrorist Margot Al-Harazi.[11] Later, Jack must prevent an old enemy and a Russian diplomat from sparking a war between the U.S. and China.</p>
+  <h2>Cast</h2>
+  <ul>
+  <li>Kiefer Sutherland	
+ Jack Bauer (195 episodes, 2001-2010)</li>
+<li>Mary Lynn Rajskub	
+ Chloe O'Brian (126 episodes, 2003-2010)</li>
+<li>Carlos Bernard	
+ Tony Almeida (115 episodes, 2001-2009)</li>
+<li>Dennis Haysbert	
+ President David Palmer (81 episodes, 2001-2007)</li>
+<li>Elisha Cuthbert	
+ Kim Bauer (79 episodes, 2001-2010)</li>
+<li>James Morrison	
+ Bill Buchanan (64 episodes, 2005-2009)</li>
+<li>Reiko Aylesworth	
+ Michelle Dessler (62 episodes, 2002-2006)</li>
+<li>Jude Ciccolella	
+ Mike Novick (59 episodes, 2001-2006)</li>
+<li>Kim Raver	
+ Audrey Raines (53 episodes, 2004-2007)</li>
+<li>Glenn Morshower	
+ Aaron Pierce (49 episodes, 2001-2009)</li>
+<li>D.B. Woodside	
+ Wayne Palmer (48 episodes, 2003-2007)</li>
+<li>Roger R. Cross	
+ Curtis Manning (45 episodes, 2005-2007)</li>
+<li>Penny Johnson	
+ Sherry Palmer (45 episodes, 2001-2004)</li>
+<li>Cherry Jones		
+ President Allison Taylor (44 episodes, 2009-2010)</li>
+<li>Gregory Itzin	
+ President Charles Logan  (44 episodes, 2005-2010)</li>
+ 
+  </ul>
+  <h2>Ratings</h2>
+  <ul>  
+  <li>&#9733 &#9733 &#9733 &#9733  8.5/10·IMDb</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 100%·Rotten Tomatoes</li>
+<li>&#9733 &#9733 &#9733 &#9733 9/10 Tv.com</li>
+  </ul>
+  
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+   <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="tvd.html">The Vampire Diaries</a></li>
+        <li><a href="originals.html">The Originals</a></li>
+        <li><a href="bang.html">The Big Bang Theory</a></li>
+        <li><a href="fargo.html">Fargo</a></li>
+        <li class="last"><a href="supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="seinfeld.html">Seinfeld</a></li>
+        <li><a href="himym.html">How I Met Your Mother</a></li>
+        <li><a href="tahm.html">Two and a Half a Men</a></li>
+        <li><a href="black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

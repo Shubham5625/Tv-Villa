@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>Breaking Bad</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="breakingbad.html">Breaking Bad</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+
+<div id="latest">
+
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/breakingbad/br11.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/breakingbad/br12.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/breakingbad/br13.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/breakingbad/br14.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/breakingbad/br15.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/breakingbad/br16.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" preload controls>
+  <source src="../video/breakingbad.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+
+
+
+
+<div class="wrapper">
+  <div id="container">
+    <h1>Breaking Bad</h1>
+    <p>Breaking Bad is an American crime drama television series created and produced by Vince Gilligan. The show originally aired on the AMC network for five seasons, from January 20, 2008, to September 29, 2013. It tells the story of Walter White (Bryan Cranston), a struggling high school chemistry teacher diagnosed with inoperable lung cancer, who, together with his former student Jesse Pinkman (Aaron Paul), turns to a life of crime, producing and selling crystallized methamphetamine to secure his family's financial future before he dies. The title is from a Southern colloquialism meaning to "raise hell". Breaking Bad is set and was filmed in Albuquerque, New Mexico.</p>
+    <p>Walter's family consists of his wife Skyler (Anna Gunn) and children, Walter, Jr. a.k.a. Flynn (RJ Mitte) and Holly (Elanor Anne Wenrich). The show also features Skyler's sister Marie Schrader (Betsy Brandt), and her husband Hank (Dean Norris), a Drug Enforcement Administration (DEA) agent. Walter hires lawyer Saul Goodman (Bob Odenkirk), who connects him with private investigator and fixer Mike Ehrmantraut (Jonathan Banks) and in turn Mike's employer, drug kingpin Gus Fring (Giancarlo Esposito). The final season introduces the characters of Todd Alquist (Jesse Plemons) and Lydia Rodarte-Quayle (Laura Fraser).</p>
+    <p>Breaking Bad is widely regarded as one of the greatest television series of all time. By the time the series finale aired, the series was among the most-watched cable shows on American television. The show received numerous awards, including sixteen Primetime Emmy Awards, eight Satellite Awards, two Golden Globe Awards, two Peabody Awards and a People's Choice Award. For his leading performance, Cranston won the Primetime Emmy Award for Outstanding Lead Actor in a Drama Series four times. In 2013, Breaking Bad entered the Guinness World Records as the highest rated show of all time.</p>
+    <h2>Plot</h2>
+	<p>Walter H. White is a chemistry genius, but works as a chemistry teacher in an Albequerque, New Mexico high school. His life drastically changes when he's diagnosed with stage III terminal lung cancer, and given a short amount of time left to live: a mere matter of months. To ensure his handicapped son and his pregnant wife have a financial future, Walt uses his chemistry background to create and sell the world's finest crystal methamphetamine. To sell his signature "blue meth," he teams up with Jesse Pinkman, a former student of his. The meth makes them very rich very quickly, but it attracts the attention of his DEA brother in law Hank. As Walt and Jesse's status in the drug world escalates, Walt becomes a dangerous criminal and Jesse becomes a hot-headed salesman. Hank is always hot on his tail, and it forces Walt to come up with new ways to cover his tracks.</p>
+    <h2>Cast</h2>
+	<p><ul>
+<li>Bryan Cranston as Walter White - a chemistry teacher diagnosed with Stage IIIA lung cancer who turns to making meth to secure his family's finances. As his shady businesses progress, Walter gains a notorious reputation under the name of Heisenberg. Cranston stated that, though he enjoyed doing comedy, he decided he
+"... should really focus on doing something else. But I think any good drama worth its weight always has a sprinkling of comedy in it, because you can ease the tension to an audience when it's necessary, and then build it back up again. Walt White has no clue he's occasionally funny, but as an actor I recognize when there are comedic moments and opportunities."</li>
+
+<li>Anna Gunn as Skyler White - Walter's wife who was pregnant with their second child prior to his diagnosis, and who becomes increasingly suspicious of her husband after he begins behaving in unfamiliar ways. Gunn sees Skyler as "grounded, tough, smart and driven". Gunn sees Skyler's stalled writing career as her biggest dream, saying "I think she really deep down yearns to be an artist and to be creative and productive."</li>
+<li>Aaron Paul as Jesse Pinkman - Walter's former student, Jesse, is a drug dealer who partners up with Walt and makes high-level meth. Paul sees Jesse as a funny kid. "He's just this lost soul - I don't think he's a bad kid, he just got mixed in the wrong crowd." Paul elaborated on the character's background, saying "He doesn't come from an abusive, alcoholic background. But maybe he just didn't relate to his father, maybe his father was too strict and too proper for Jesse." Paul compared the character's relationship with Walt to The Odd Couple.</li>
+<li>Dean Norris as Hank Schrader - Marie's husband, Walter and Skyler's brother-in-law and a DEA agent. At the beginning of the series, Hank was intended to be the "comic relief." Norris, who has played several cops before in film and television, stated,
+"Having played so many cops, I've talked with a lot of technical advisers, so I've been able to pick up a lot. Coincidentally, one of my best friends growing up is a cop in Chicago, and one of my other best friends out in LA is a sheriff. So I get to see all the components of that culture."</li>
+
+<li>Betsy Brandt as Marie Schrader - Skyler's sister and Hank's kleptomaniac wife. Brandt described Marie as "an unpleasant bitch", but also stated there was more to her than that. "I think we're seeing more of it now that she would be there for her family. But it's all about her."</li>
+<li>RJ Mitte as Walter White, Jr. - Walter and Skyler's son, who has cerebral palsy. He begins lashing out after Walter's cancer announcement. Like Walter Jr., Mitte has cerebral palsy, although his is a milder form.[43] Mitte stated he had to regress from his therapy to portray the character, staying up late into the night to slur his speech and learning to walk on crutches so his walking wouldn't look fake.</li>
+<li>Bob Odenkirk as Saul Goodman (recurring season 2, main cast season 3-5) - a crooked strip mall lawyer who represents Walt and Jesse. Odenkirk based his character on film producer Robert Evans.
+"I thought about Robert Evans because I've listened to The Kid Stays in the Picture on CD. He's constantly switching up his cadence and his delivery. He emphasizes interesting words. He has loads of attitude in almost every line that he says. So when I rehearse the scenes alone I do my impersonation of Robert Evans to find those moments and turns. Then I go out and I do Saul."</li>
+
+<li>Giancarlo Esposito as Gustavo "Gus" Fring (recurring season 2, main cast season 3-4) - a high level drug distributor who has a cover as an owner of a fast food chain Los Pollos Hermanos. Esposito stated that for the third season, he incorporated his yoga training in his performance.
+"Gus is the coolest cucumber that ever walked the Earth. I think about Eddie Olmos way back in Miami Vice. He was like dead - he was hardly breathing. I thought, how is this guy just standing in this fire and doing nothing? Gus has totally allowed me that level of flexibility and relaxation - not because he has ultimate power and he knows he can take someone's life. He's just confident."</li>
+
+<li>Jonathan Banks as Mike Ehrmantraut (guest star season 2, main cast season 3-5: part 1) - works for Gus as an all-purpose cleaner and hitman, and also works for Saul as a private investigator. The character of Mike has been compared to Harvey Keitel's Winston Wolf character in Pulp Fiction, which Banks says he isn't trying to emulate: "I immediately tried to put it out of my mind, quite honestly. His cleaner ain't my cleaner. But throughout this world, you would suspect there had been a great many cleaners, whether government-run or individual contractors."</li>
+<li>Laura Fraser as Lydia Rodarte-Quayle (recurring season 5: part 1, main cast season 5: part 2) - a high-ranking employee of Madrigal Electromotive and a former associate of Gus Fring. She reluctantly begins supplying Walt and Jesse with methylamine and helps Walt expand his operation overseas.</li>
+<li>Jesse Plemons as Todd Alquist (recurring season 5: part 1, main cast season 5: part 2) - an employee of Vamonos Pest Control who becomes an associate of Walt and Jesse.</li></p> 
+  </ul></p>
+  <h2>Ratings</h2>
+  <ul>
+  <li>&#9733 &#9733 &#9733 &#9733 &#9733 9.5/10·IMDb</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 100%·Rotten Tomatoes</li>
+<li>&#9733 &#9733 &#9733 &#9733 &#9733 9/10·TV.com</li>
+  </ul>
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+     <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+    <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="tvd.html">The Vampire Diaries</a></li>
+        <li><a href="originals.html">The Originals</a></li>
+        <li><a href="bang.html">The Big Bang Theory</a></li>
+        <li><a href="fargo.html">Fargo</a></li>
+        <li class="last"><a href="supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="seinfeld.html">Seinfeld</a></li>
+        <li><a href="himym.html">How I Met Your Mother</a></li>
+        <li><a href="tahm.html">Two and a Half a Men</a></li>
+        <li><a href="black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

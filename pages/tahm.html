@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>Two and a Half Men</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout1.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="../homepage.html">TvVilla</a></h1>
+      <p>Your Complete guide to TV Shows</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="tvshows.html">Tv Shows</a></li>
+        <li><a href="loginregister.html">Login/Register</a></li>
+        <li class="last"><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="tvshows.html">Tv Shows</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Drama</a></li>
+      <li>&#187;</li>
+      <li class="current"><a href="tahm.html">Two and a Half Men</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper1">
+<div id="latest">
+    <div class="fl_left"><a href="#">
+	<style>
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 800, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 800, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 800, y: 0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 800, y: -0.6, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TL"] = { $Duration: 800, x: 0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["TR"] = { $Duration: 800, x: -0.6, y: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BL"] = { $Duration: 800, x: 0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+            _CaptionTransitions["BR"] = { $Duration: 800, x: -0.6, y: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
+
+            _CaptionTransitions["WAVE|L"] = { $Duration: 1500, x: 0.6, y: 0.3, $Easing: { $Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave }, $Opacity: 2, $Round: { $Top: 2.5} };
+            _CaptionTransitions["MCLIP|B"] = { $Duration: 600, $Clip: 8, $Move: true, $Easing: $JssorEasing$.$EaseOutExpo };
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after </li> slide), 3 Chain Flatten (goes after </li> slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before </li> slide), 3 Chain Flatten (goes before </li> slide and flatten all caption animations), default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <div id="slider1_container" style="position: relative; width: 500px; height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:500px; height:300px; overflow: hidden;">
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/tahm/t1.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 16px; font-weight: italic; line-height: 30px; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/tahm/t2.jpg" />
+             <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/tahm/t3.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			<!-- Slide -->
+            <div>
+                <img u="image" src="../image/tahm/t4.jpg" />
+               <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div>
+                <img u="image" src="../image/tahm/t5.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                        
+                    </div>
+                </div>
+            </div>
+			 <!-- Slide -->
+            <div>
+                <img u="image" src="../image/tahm/t6.jpg" />
+                <div u="caption" t="MCLIP|B" style="position: absolute; top: 270px; left: 0px;
+                    width: 575px; height: 30px;">
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        background-color: Black; opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div style="position: absolute; top: 0px; left: 0px; width: 575px; height: 30px;
+                        color: White; font-size: 14px; font-weight: italic; line-height: 30px; text-align: center;">
+                    </div>
+                </div>
+            </div>
+			 
+			 
+	</div>
+	</div>
+	</a></div>
+	<div class="fl_right">
+      <video width="450" height="300" controls>
+  <source src="../video/tahm.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+    <br class="clear" />
+</div>
+</div>
+<div class="wrapper">
+  <div id="container">
+    <h1>Two and a Half Men</h1>
+	<p>Two and a Half Men is an American television sitcom that began broadcast on CBS on September 22, 2003 and ended on February 19, 2015 after twelve seasons. Originally starring Charlie Sheen, Jon Cryer, and Angus T. Jones, the show was about a hedonistic jingle writer, Charlie Harper; his uptight brother, Alan; and Alan's son, Jake. After Alan divorces, he moves with his son to share Charlie's beach-front Malibu house and complicate Charlie's free-wheeling life.</p>
+	<p>In 2010, CBS and Warner Bros. Television reached a multi-year broadcast agreement for the series, renewing it through at least the 2011–12 season. But, on February 24, 2011, CBS and Warner Bros. decided to end production for the rest of the eighth season after Sheen entered drug rehabilitation and made "disparaging comments" about the show's creator and executive producer Chuck Lorre. Sheen's contract was terminated on March 7</p>
+	<p>The ninth-season premiere, "Nice to Meet You, Walden Schmidt", killed off Sheen's character and introduced Ashton Kutcher as Walden Schmidt, his replacement. Alan is shown moving on with his life after the death of Charlie. He has a new best friend and housemate, Walden, who is dealing with his own troubles following a bad divorce. Walden, Alan, and Jake eventually bond, becoming close friends and forming a surrogate family unit. Jake, who joins the army at the end of season nine, leaves for Japan at the end of season ten.</p>
+	<p>On April 26, 2013, CBS renewed the series for an 11th season after closing one-year deals with Kutcher and Cryer. Jones, who is attending college, was relegated to recurring status for Season 11, but eventually departed from the show without making a single appearance in Season 11. He was replaced by Jenny (portrayed by Amber Tamblyn), Charlie's previously unknown daughter. Season 11 premiered on September 26, 2013. On March 13, 2014, CBS renewed the series for a 12th season, which CBS subsequently announced would be the final season. The season premiered on October 30, 2014 with the episode "The Ol' Mexican Spinach" and concluded on February 19, 2015 with the forty-minute finale "Of Course He's Dead"</p>
+  <h2>Plot</h2>
+  <p>The series revolved initially around the life of the Harper brothers: Charlie (Charlie Sheen) and Alan (Jon Cryer) and Alan's son, Jake (Angus T. Jones). Charlie is a bachelor who writes commercial jingles for a living while leading a hedonistic lifestyle. When Alan's wife Judith (Marin Hinkle) decides to divorce him, he moves into Charlie's Malibu beach house, with Jake coming to stay over the weekends. Charlie's housekeeper is Berta (Conchata Ferrell), a sharp-tongued woman who initially resists the change to the household but grudgingly accepts it. Charlie's one-night stand Rose (Melanie Lynskey) was first introduced as his stalker in the pilot episode.</p>
+ <p>The first five seasons find Charlie in casual sexual relationships with numerous women until the sixth season, when he becomes engaged to Chelsea (Jennifer Bini Taylor). However, the relationship does not last as Chelsea breaks off their engagement. Afterwards, Charlie flies to Paris in the eighth season finale with his stalker Rose. In the ninth season premiere, introducing a revamped show, it is revealed that Charlie died when he fell in front of a subway train in Paris. There are suggestions that Rose pushed him in the train's path after learning Charlie had cheated on her.</p>
+ <p>Alan's experiences are somewhat different. Throughout the series, Alan continues to deal with his son Jake's growing up, and the aftermath of his divorce, when he has little success with women. His marriage to Kandi (April Bowlby) at the end of the third season was short-lived. In the fourth season, Alan is back at the beach house paying alimony to two women out of his meager earnings as a chiropractor. In the seventh season, he begins a relationship with Lyndsey McElroy (Courtney Thorne-Smith), the mother of one of Jake's friends. Their relationship is temporarily suspended when Alan cheats on her and accidentally burns down her house, but the relationship eventually resumes.</p>
+ <p>In the ninth season premiere (after Charlie's death), the beach house is sold to Walden Schmidt (Ashton Kutcher), an Internet billionaire going through a divorce from Bridget (Judy Greer). Alan leaves to live with his mother Evelyn (Holland Taylor) when the house is sold, but Walden invites both Alan and Jake back to live in the beach house. He needs friends and the three form a tightknit surrogate family.</p>
+ <p>At the end of the ninth season, Jake joins the army; he appears occasionally during season ten. In the tenth season, Walden proposes to his English girlfriend Zoey (Sophie Winkleman) only to be turned down, and discovers she has another man. He becomes depressed. Meanwhile, Alan gets engaged to his girlfriend Lyndsey, while Judith leaves her second husband Herb Melnick (Ryan Stiles) (to whom she had been married since the fourth season) after he cheats on her with his receptionist (they later reconcile). Alan and Lyndsey's relationship of 3 years ends as she wants to move on. Alan, distraught, creates a new image for himself. Rose returns and begins to date Walden; however when they break up, she becomes obsessed with him and begins to stalk him. Jake begins to date Tammy (Jaime Pressly), who is 17 years his senior and has three kids; Jake cheats on her with her daughter Ashley, resulting in their breakup, and Ashley is wooed back by her much-older ex-lover, Jerry (Scott Bakula). Walden begins to date a poor woman named Kate (Brooke D'Orsay) and changes his name to "Sam Wilson" and pretends to be poor to find someone who wants him for him, not for his money. They later break up when he reveals who he really is. Jake announces he is being shipped to Japan for a year, and so he and Alan go on a father-son bonding trip.</p>
+ <p>In the eleventh season, a young woman arrives at the beach house, announcing that she is Charlie Harper's biological daughter, Jenny (Amber Tamblyn)[14] and moves in with Walden and Alan.
+
+In the twelfth season, Walden decides to reprioritize his life after a health scare by deciding to adopt a baby. He realizes that the only way to do this is to be married, but doesn't know anyone that'll do it, so turns to Alan as pretending to be a married gay couple would ensure success at adopting. Jenny moves out of the house and moves in with Evelyn due to Walden and Alan preparing to adopt.</p>
+ 
+ <h2>Cast</h2>
+  <ul>
+  <li>Jon Cryer	as
+ Alan Harper </li>
+<li>Angus T. Jones	as	
+ Jake Harper </li>
+<li>Conchata Ferrell	as	
+ Berta </li>
+<li>Charlie Sheen	as	
+ Charlie Harper </li>
+<li>Holland Taylor	as	
+ Evelyn Harper </li>
+<li>Ashton Kutcher	as	
+ Walden Schmidt </li>
+<li>Marin Hinkle	as	
+ Judith Harper </li>
+<li>Melanie Lynskey	as.	
+ Rose </li>
+  </ul>
+  <h2>Ratings</h2>
+  <ul>  
+  <li>&#9733 &#9733 &#9733 &#9733  8/10·IMDb</li>
+<li>&#9733 &#9733 &#9733  3.5/5 Rotten Tomatoes</li>
+<li>&#9733 &#9733 &#9733 &#9733 8/10 Tv.com</li>
+  </ul>  
+  </div>
+</div>
+<div class="wrapper">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="email.php" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  name="email" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+   <div class="footbox">
+      <h2>Highest User Rated</h2>
+      <ul>
+        <li><a href="breakingbad.html">Breaking Bad</a></li>
+        <li><a href="got.html">The Game of Thrones</a></li>
+        <li><a href="sherlock.html">Sherlock</a></li>
+        <li><a href="truedetective.html">True Detective</a></li>
+        <li class="last"><a href="homeland.html">Homeland</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Most Viewed</h2>
+      <ul>
+        <li><a href="tvd.html">The Vampire Diaries</a></li>
+        <li><a href="originals.html">The Originals</a></li>
+        <li><a href="bang.html">The Big Bang Theory</a></li>
+        <li><a href="fargo.html">Fargo</a></li>
+        <li class="last"><a href="supernatural.html">Supernatural</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Best Comedy Series</h2>
+      <ul>
+        <li><a href="seinfeld.html">Seinfeld</a></li>
+        <li><a href="himym.html">How I Met Your Mother</a></li>
+        <li><a href="tahm.html">Two and a Half a Men</a></li>
+        <li><a href="black.html">Orange is the new Black</a></li>
+        <li class="last"><a href="arrested.html">Arrested Development</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015. All Rights Reserved - <a href="../homepage.html">TvVilla</a></p>
+    <p class="fl_right">Follow us on <a href="https://www.facebook.com/shubhmankum">Facebook</a>, <a href="https://twitter.com/shubhmankum">Twitter</a>, <a href="https://in.linkedin.com/pub/shubham-kumar/aa/74b/8a9">Linked In</a> and <a href="http://instagram.com/shubhmankum">Instagram</a>.</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
